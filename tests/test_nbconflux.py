@@ -170,6 +170,7 @@ def test_optional_components(notebook_path, page_url, server):
     # Mock current page version lookup
     server.add('GET', 'http://confluence.localhost/rest/api/content/12345',
         json={
+            'title': 'fake-title',
             'version': {
                 'number': 100
             }
