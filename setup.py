@@ -19,6 +19,7 @@ setup(
     url='https://github.com/vericast/nbconflux',
     platforms=['Linux', 'Mac OSX', 'Windows'],
     packages=find_packages(),
+    python_requires='>=3.9',
     include_package_data = True,
     license='BSD 3-Clause',
     entry_points = {
