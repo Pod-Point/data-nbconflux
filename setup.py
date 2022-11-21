@@ -27,10 +27,10 @@ setup(
         ]
     },
     install_requires=[
-        'bleach',
-        'nbconvert>=6.0',
-        'requests',
-        'traitlets',
-        'html5lib',
+        'bleach==5.0.1',
+        'nbconvert==7.2.5',
+        'requests==2.28.1',
+        'traitlets==5.5.0',
+        'html5lib==1.1',
     ],
 )
