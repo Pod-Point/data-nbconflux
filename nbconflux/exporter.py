@@ -281,7 +281,6 @@ class ConfluenceExporter(HTMLExporter):
         XHTML compliant for compatibility with Confluence storage format.
         """
         renderer = ConfluenceMarkdownRenderer(escape=False,
-                                              use_xhtml=True,
                                               anchor_link_text=self.anchor_link_text)
         return MarkdownWithMath(renderer=renderer).render(source)
 
