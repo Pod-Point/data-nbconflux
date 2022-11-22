@@ -92,7 +92,7 @@ def test_post_to_confluence(notebook_path, page_url, server):
     # Markdown is HTML
     assert re.search('<h1[^>]*>Notebook for Testing', html) is not None
     # Makrdown image is <ac:image>
-    assert '<ac:image ac:alt="Juputer Logo"><ri:url ri:value="http://jupyter.org/assets/nav_logo.svg"></ri:url></ac:image>' in html
+    assert '<ac:image ac:title="Juputer Logo"><ri:url ri:value="https://jupyter.org/assets/homepage/main-logo.svg"></ri:url></ac:image>' in html
     # Image is a properly versioned attachment
     assert '<ac:image><ri:url ri:value="http://confluence.localhost/download/attachments/12345/output_6_0.png?version=6" /></ac:image>' in html
     # Input hidden, output shown
@@ -170,6 +170,7 @@ def test_optional_components(notebook_path, page_url, server):
     # Mock current page version lookup
     server.add('GET', 'http://confluence.localhost/rest/api/content/12345',
         json={
+            'title': 'fake-title',
             'version': {
                 'number': 100
             }

@@ -55,5 +55,4 @@ def notebook_to_page(notebook_file, confluence_url, username=None, password=None
 
     exporter = ConfluenceExporter(c)
     result = exporter.from_filename(notebook_file)
-    print('Updated', confluence_url)
     return result
